@@ -55,6 +55,7 @@ public class FilmRepository {
         Transaction transaction = session.beginTransaction();
         String hql = "from Film";
         Query<Film> fromFilm = session.createQuery(hql, Film.class);
+//        List resultList = session.createQuery(hql).getResultList();
         List<Film> listOfFilm = fromFilm.list();
         transaction.commit();
         session.close();
